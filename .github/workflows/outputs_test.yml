@@ -1,7 +1,7 @@
 name: outputs_test
 
 on:
-  workflow_dispath:
+  workflow_dispatch:
 
 jobs:
 
@@ -14,8 +14,8 @@ jobs:
 
     steps:
       - id: step1
-        run echo "::set-output name=test::Hello"
+        run: echo "::set-output name=test::Hello"
       - id: step2
-        run echo "::set-output name=test::World"
+        run: echo "::set-output name=test::World"
 
     
