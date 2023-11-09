@@ -18,4 +18,20 @@ jobs:
       - id: step2
         run: echo "test=World" >> $GITHUB_OUTPUT
 
-    
+  job2:
+    runs-on: ubuntu-latest
+    needs: job1
+    steps:
+      - id: step3
+        run: echo ${{needs.job1.outputs.output1}}
+
+  job3:
+    runs-on: ubuntu-latest
+    needs: job2
+    steps:
+      - id: step4
+      run: echo ${{needs.job1.outputs.output1}}
+
+
+
+  
