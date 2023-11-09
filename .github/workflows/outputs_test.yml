@@ -26,7 +26,7 @@ jobs:
       - id: step3
         run: |
           echo ${{needs.job1.outputs.version}}
-          run: echo ${{needs.job1.outputs.version}} >> $GITHUB_OUTPUT
+          echo "version=${{needs.job1.outputs.version}}" >> $GITHUB_OUTPUT
 
   job3:
     runs-on: ubuntu-latest
