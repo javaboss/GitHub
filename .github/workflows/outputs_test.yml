@@ -14,8 +14,8 @@ jobs:
 
     steps:
       - id: step1
-        run: echo "::set-output name=test::Hello"
+        run: echo "test=Hello" >> $GITHUB_OUTPUT
       - id: step2
-        run: echo "::set-output name=test::World"
+        run: echo "test=World" >> $GITHUB_OUTPUT
 
     
