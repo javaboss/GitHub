@@ -1,0 +1,30 @@
+name: if_test
+
+on:
+  pull_request:
+    types: [opened, reopened, closed, edited]
+    paths:
+        - uat2_deployments.yaml
+
+jobs:
+  job1:
+    if: ${{ github.event.pull_request.opened }}
+    runs-on: ubuntu-latest
+    steps:
+      - id: step1
+        run: |
+          echo "JOB1 - PULL REQUEST OPENED"
+
+  job2:
+    runs-on: ubuntu-latest
+    needs: job1
+      
+    steps:
+      - id: step2
+        run: |
+          echo "JOB 2"
+        
+
+
+
+  
