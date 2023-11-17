@@ -5,9 +5,11 @@ on:
     types: [opened, reopened, closed, edited]
     paths:
         - uat2_deployments.yaml
-
+    branches: 
+        - main
 jobs:
   job1:
+    if: ${{ github.event.pull_request.opened }}
     runs-on: ubuntu-latest
     steps:
       - id: step1
