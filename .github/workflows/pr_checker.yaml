@@ -3,7 +3,9 @@ name: pr_checker
 on:
   pull_request:
     types: [opened, reopened, closed, edited]
-    
+    branches:
+        - main
+  
 jobs:
   pr_checker:
     name: pr-check
