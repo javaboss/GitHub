@@ -10,4 +10,4 @@ jobs:
       - id: do_some_checks
         run: |
           echo "DOING MY CHECK!"
-          return 0
+          exit 0
