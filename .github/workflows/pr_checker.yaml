@@ -5,6 +5,7 @@ on:
 
 jobs:
   pr_checker:
+    name: pr-check
     runs-on: ubuntu-latest
     steps:
       - id: do_some_checks
