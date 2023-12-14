@@ -1,0 +1,13 @@
+name: pr_checker
+
+on:
+  workflow_dispatch
+
+jobs:
+  pr_checker:
+    runs-on: ubuntu-latest
+    steps:
+      - id: do_some_checks
+        run: |
+          echo "DOING MY CHECK!"
+          return 0
